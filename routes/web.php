@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\CalendarEvents;
+use App\Http\Livewire\CreateEvent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +20,4 @@ Route::get('/', function () {
 
 // LiveWire Routes
 Route::get('/events', CalendarEvents::class)->name('events.index');
+Route::get('/create-event', CreateEvent::class)->name('events.create');

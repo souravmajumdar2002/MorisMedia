@@ -9,4 +9,5 @@ class CalendarEvent extends Model
 {
     use HasFactory;
 	protected $table = 'm_event_calendar_settings';
+	protected $guarded = [];
 }

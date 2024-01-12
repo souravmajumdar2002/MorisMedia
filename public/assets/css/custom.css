@@ -1,0 +1,15 @@
+.menu-bar-custom {
+    float: right;
+    width: 100%;
+    text-align: right;
+    margin-right: 9%;
+    padding: 30px;
+}
+.menu-bar-custom a {
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 10%;
+    color: #fff;
+    background-color: #EF1855;
+    font-weight: 500;
+}
