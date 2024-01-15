@@ -34,6 +34,7 @@ class CalendarEvents extends Component
 
     public function render()
     {
+		$months = [];
         $events = EventModel::all();
 		/*$weekDays = [
 					'sun'=>'Sunday',
@@ -59,15 +60,22 @@ class CalendarEvents extends Component
 					'December' => '31',
 				];*/
 				
+
+for ($i = 1; $i <= 12; $i++) {
+    $month = Carbon::create(null, $i, 1);
+    $months[$i] = $month->format('F');
+}
 		$firstDayOfMonth = Carbon::create($this->currentYear, $this->currentMonth, 1);
         $daysInMonth = $firstDayOfMonth->daysInMonth;
         $startDayOfWeek = $firstDayOfMonth->dayOfWeek;
 
-        $monthName = $firstDayOfMonth->format('F');
+        $monthName = Carbon::now()->format('F');
+		//dd($monthName);
         $daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		
         return view('livewire.calendar-events', [
 			'events' => $events,
+			'months' =>  $months,
             'monthName' => $monthName,
             'daysOfWeek' => $daysOfWeek,
             'daysInMonth' => $daysInMonth,

@@ -31,7 +31,7 @@
 					
 					
 					
-					<table>
+					<!--<table>
         <thead>
             <tr>
                 @foreach($daysOfWeek as $day)
@@ -55,7 +55,7 @@
                 </tr>
             @endfor
         </tbody>
-    </table>
+    </table>-->
 					
 					
 					
@@ -314,9 +314,9 @@
                                 <div class="column">13:00</div>
                                 <div class="column">14:00</div>
                             </div>
-                            @foreach($months as $key => $value)
+                            @foreach($daysOfWeek as $day)
 								<div class="make_booking">
-									<div class="column th"><span>10</span>{{$value}}</div>
+									<div class="column th"><span>10</span>{{$day}}</div>
 									<div class="column">
 										<div class="td1">
 											<span class="b_time pink">09:00 - 09:15</span>
